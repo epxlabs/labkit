@@ -11,9 +11,13 @@ sudo cp -r /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
 # Installs Git
 brew install git
 
-# Installs emacs
-brew install --with-cocoa emacs
-ln -sf /usr/local/Cellar/emacs/24.5/Emacs.app /Applications/Emacs.app
+# Installs emacs (last versions comented)
+# brew install --with-cocoa emacs
+# ln -sf /usr/local/Cellar/emacs/24.5/Emacs.app /Applications/Emacs.app
+
+cp Formula/emacs24_5_1.rb /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/emacs24_5_1.rb
+brew install --with-cocoa emacs24_5_1
+
 rm -rf ~/.emacs.d
 # Make sure your Github account has an SSH key generated and associated or the next line will not work
 git clone git@github.com:epxlabs/emacs-live.git ~/.emacs.d
